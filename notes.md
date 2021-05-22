@@ -92,6 +92,11 @@ Only `<li>` can be used inside a list. But one can nest lists inside an `<li>` t
 anchor tags are *in-line* elements, which means the do not take their own new line. They can be accomodated inside a paragraph or any other text
 
 
+## Session 3
+- Undestanding what HTML5 actually is
+- Block vs Inline Elements
+- `span`and `div`elements
+- NTH: `sub` `hr` `br`and `sup`elements   
 
-
-
+### HTML5 is not a *version*
+HTML5 is an *evolution* of the HTML Living Standard: There is no *official* version of HTML. There only a "how HTML must work": every company build their own HTML into their applications. These instructions are [here](https://html.spec.whatwg.org/)
