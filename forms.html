@@ -11,6 +11,7 @@
 <body>
     <h1>Forms Demo</h1>
 
+    <h2>Exmaple</h2>
     <form action="/tacos">
         <p>
             <label for="username">Enter a username: </label>
@@ -34,6 +35,51 @@
         </p>
         <button>Submit Super easy to change text</button>
         <input type="submit" value="Submit text must be changed using an attribute">
+    </form>
+
+    <h2>Hijacking Searches</h2>
+
+    <h3>Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="q" id="reddit_search">
+        <button>Search Youtube</button>
+    </form>
+
+    <h2>More inputs</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree_tos">
+        <label for="agree_tos">I agree to everything</label>
+        <p>
+            <label for="xs">XS:</label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S:</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M:</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="">-- Please Select Your Meal--</option>
+                <option value="fish">Fish</option>
+                <option value="veg">Veggie</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of cheese</label>
+            <input type="range" name="cheese_level" id="cheese" min="1" max="100" step="7" value="75">
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Not Inputs</h2>
+    <form action="/birds">
+        <p>
+            <label for="requests">Please add anything you like</label>
+            <textarea name="requests" id="requests" cols="30" rows="10" placeholder="Type something here"></textarea>
+            <button>Submit</button>
+        </p>
     </form>
 
 </body>

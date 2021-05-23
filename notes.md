@@ -158,4 +158,66 @@ A form represents a section of the document containing interactive controls for 
 - The *action* attribute specifies WHERE the data should be sent. e.g.: `/search/`, `/tacos`
 - The *method* attribute specifies which HTTP method should be used
 
-What con go inside a form: almost any type of input and text
+What con go inside a form: almost any type of input and text. This is the basic structure:
+```
+<form action="/tacos">
+    <p>
+        <label for="username">Enter a username: </label>
+        <input id="username" type="text" placeholder="username" name="name">
+    </p>
+    <button>Submit</button>
+</form>
+```
+The abtributes do the following:
+- Inside `label`, `for=""` specifies the identifier for the label across the form (or document *citation needed )
+- The label identifier then is passed to the `input` in the `id` attribute
+- `name`specifies the variable name that will be passed to the server when the action/query is triggered. It will be reflected in the address bar
+- `placeholder`specifies the text that is displayed when the user has not typed anything yet. Useful for suggestions like "enter your search here"
+
+
+
+Why add labels? Several reasons:
+- They provide visual information/text/indicators related to the input
+- Labels allow to click this visual indicators in sync with the actual input, whichc makes it easier and more usable in mobile applications
+- 
+
+
+Checkboxes
+
+
+Radio Buttons
+Note that radio buttons and checkboxes always send `on` when submitted, unless the `value` attribute is specified.
+
+The following won't work when submit button is clicked
+```
+<form action="">
+    <label for="xs">XS:</label>
+    <input type="radio" name="size" id="xs">
+    <label for="s">S:</label>
+    <input type="radio" name="size" id="s">
+    <label for="m">M:</label>
+    <input type="radio" name="size" id="m">
+    <button>Submit</button>
+</form>
+``
+This will send
+```
+?size=on
+```
+
+The following, however, will send the data we want to send:
+```
+<form action="">
+    <label for="xs">XS:</label>
+    <input type="radio" name="size" id="xs" value="xs">
+    <label for="s">S:</label>
+    <input type="radio" name="size" id="s" value="s">
+    <label for="m">M:</label>
+    <input type="radio" name="size" id="m" value="m">
+    
+    <button>Submit</button>
+</form>
+```
+
+
+
