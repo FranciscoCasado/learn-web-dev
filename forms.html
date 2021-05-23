@@ -10,6 +10,7 @@
 
 <body>
     <h1>Forms Demo</h1>
+    <hr>
 
     <h2>Exmaple</h2>
     <form action="/tacos">
@@ -38,6 +39,7 @@
     </form>
 
     <h2>Hijacking Searches</h2>
+    <hr>
 
     <h3>Youtube</h3>
     <form action="https://www.youtube.com/results">
@@ -74,12 +76,31 @@
     </form>
 
     <h2>Not Inputs</h2>
+    <hr>
     <form action="/birds">
         <p>
             <label for="requests">Please add anything you like</label>
             <textarea name="requests" id="requests" cols="30" rows="10" placeholder="Type something here"></textarea>
             <button>Submit</button>
         </p>
+    </form>
+
+    <h2>Validation</h2>
+    <hr>
+    <form action="/dummy">
+        <p>
+            <label for="first">Enter Firt Name</label>
+            <input type="text" name="first" id="first" required>
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" minlength="5" maxlength="10">
+        </p>
+
+        <p> <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <button>Submit</button>
     </form>
 
 </body>
