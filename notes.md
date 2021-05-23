@@ -119,7 +119,7 @@ These are just for proper handling of the table
 - `<thead>`: these
 - `<tfoot>`: obvious?
 
-Always follow the following structure:
+Always follow this structure:
 ```
 <table>
         <thead>
