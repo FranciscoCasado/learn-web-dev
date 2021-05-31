@@ -3,6 +3,9 @@ h3 {
     background-color: orange;
     text-align: center;
     font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-family: Helvetica, sans-serif;
 }
 
 button {
@@ -13,4 +16,8 @@ button {
 p {
     color: olive;
     text-decoration: line-through blue wavy;
+}
+
+html{
+    font-family: sans-serif;
 }
