@@ -1,0 +1,16 @@
+h3 {
+    color: indigo;
+    background-color: orange;
+    text-align: center;
+    font-weight: normal;
+}
+
+button {
+    color: magenta;
+    background-color: cyan;
+}
+
+p {
+    color: olive;
+    text-decoration: line-through blue wavy;
+}

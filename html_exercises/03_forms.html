@@ -88,20 +88,38 @@
     <h2>Validation</h2>
     <hr>
     <form action="/dummy">
-        <p>
-            <label for="first">Enter Firt Name</label>
-            <input type="text" name="first" id="first" required>
-        </p>
-        <p>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" minlength="5" maxlength="10">
-        </p>
+        <h2>¿Cuanto material queda en bodega?</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="first">Cañeria cobre</label>
+                    </td>
 
-        <p> <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
-        </p>
+                    <td><input type="text" name="first" id="first" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="username">Fitting PVC</label>
+                    </td>
+                    <td>
+                        <input type="text" id="username" name="username" minlength="5" maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Codos </label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" required>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <button>Submit</button>
     </form>
+
 
 </body>
 
