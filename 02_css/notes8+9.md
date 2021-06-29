@@ -30,3 +30,20 @@ padding:
 The margin works as padding, but outside the box border.
 By default, the `body` has a fixed margin value, so it is common to override it to cero at the very start of a new project.
 
+## Display
+The `display`property handles how elements use the space, in relation to other elements
+
+
+## EMs & REMs
+
+*EM* is a unit in the typography field that is equil to the currently specified point size.
+
+`em` in `font-size` refers to the relative size of the **parent**
+`em` in `marigin`, `padding`, `border-radius` refers to the relative size of the **element**
+
+*REM* stands for *Root EM*, which refers to the font size specified for the root element of the page, which often is `<html>``
+
+One may want to use EMs and REMs combined, depending on the context and what the behaviour of specific elements should be.
+
+
+# Section 9 - Other Useful CSS Properties

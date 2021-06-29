@@ -127,7 +127,7 @@ The following, however, will send the data we want to send:
 
 ### Dropdown lists: Select and Option
 
-```
+```html
 <form>
     <label for="meal">Please Select an Entree</label>
     <select name="meal" id="meal">
@@ -139,7 +139,7 @@ The following, however, will send the data we want to send:
 </form>
 ```
 
-```
+```html
 <html lang="en">
 
 <head>
