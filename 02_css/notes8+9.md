@@ -47,3 +47,9 @@ One may want to use EMs and REMs combined, depending on the context and what the
 
 
 # Section 9 - Other Useful CSS Properties
+
+## Opacity & Alpha Channel
+
+Setting `color` with `rgba` only sets the color for the selected property, however `opacity` sets the transparecy/opacity for the entire element and its children
+
+## Position
