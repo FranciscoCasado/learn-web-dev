@@ -1,0 +1,24 @@
+
+body{
+    margin: 0;
+    display: flex;
+    background-color:  #ffa600;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    width: 80%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1624983918570-6f2223069c0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+    background-size: cover;
+    background-position: center;
+    position: center;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+    font-family: Yellowtail, cursive;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+h2 {
+    border: solid thick;
+    border-radius: 2px;
+}
+
+h2:nth-of-type(1){
+    background-color: palegoldenrod;
+}
+
+h2:nth-of-type(2){
+    background-color: palegreen;
+}
+
+h2:nth-of-type(3){
+    background-color: paleturquoise;
+}
+
+h2:nth-of-type(4){
+    background-color: palevioletred;
+}
+
+section:hover h2:nth-of-type(even){
+    transform: translateX(10px);
+    transition: 1s ease-in-out;
+}
+
+section h2:first-of-type{
+    transform: rotate(45deg);
+}
