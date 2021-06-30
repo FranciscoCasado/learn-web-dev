@@ -3,7 +3,7 @@ Lest's start with **HTML**
 HTML is a *markup language* used to describe and annotate text format, styles and annotations. The goal of HTML is to take plain text and give it visual structure and appearances.
 
 ### HTML Elements
-```
+```html
 <i> italics </i>
 <b> italics </b>
 ```
@@ -15,7 +15,7 @@ Every page must have ONE `<head>` and ONE `<body>`. The head contains the metada
 
 Also, we need some tags to define this document as an HTML one by using:
 
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,7 +33,7 @@ In VS Code you can use the *Format this document* to re-arrange the file content
 ### Lists: ordered and unordered
 
 
-```
+```html
 <ul> This indicates an Unordered List opening
     <li>This is an List Item</li>
     <li>This is another List Item</li>

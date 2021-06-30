@@ -31,3 +31,7 @@ Also, we can use `align-self`
 ## Flex Wrap
 `flex: wrap-reverse` also changes the **cross axis** :grimmacing:
 
+## Flexing items
+`flex-basis`
+`flex-grow` is the speed at which an element will occupy available space to fill the main axis
+`flex-shrink` is the speed at which an element will occupy available space to fill the main axis

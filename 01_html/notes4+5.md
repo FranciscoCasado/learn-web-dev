@@ -26,7 +26,7 @@ These are just for proper handling of the table
 - `<tfoot>`: obvious?
 
 Always follow this structure:
-```
+```html
 <table>
     <thead>
         <tr>
@@ -65,7 +65,7 @@ A form represents a section of the document containing interactive controls for 
 - The *method* attribute specifies which HTTP method should be used
 
 What con go inside a form: almost any type of input and text. This is the basic structure:
-```
+```html
 <form action="/tacos">
     <p>
         <label for="username">Enter a username: </label>
@@ -95,7 +95,7 @@ Radio Buttons
 Note that radio buttons and checkboxes always send `on` when submitted, unless the `value` attribute is specified.
 
 The following won't work when submit button is clicked
-```
+```html
 <form action="">
     <label for="xs">XS:</label>
     <input type="radio" name="size" id="xs">
