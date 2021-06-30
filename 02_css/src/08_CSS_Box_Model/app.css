@@ -1,0 +1,111 @@
+html {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+}
+
+h1 {
+    background-color: palegreen;
+    padding-right: 50px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+span {
+    background-color: paleturquoise;
+    padding: 20px;
+    display: inline-block;
+}
+
+#one {
+    background-color: paleturquoise;
+    border-style: solid;
+    border-width: 2px;
+
+    /* border is included in overall content dimensions */
+    box-sizing: border-box; 
+}
+
+#two {
+    background-color:lightblue;
+
+    /* width style color*/
+    border: medium dashed green;
+    border-left: thick solid darkgreen;
+}
+
+#three {
+    background-color: lightsalmon;
+
+    /* width style color*/
+    border: medium dashed palegoldenrod;
+    border-left: thick dotted goldenrod;
+
+    /* this is now a circle hehe*/
+    border-radius: 50% / 50%;
+}
+
+section div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: palegoldenrod;
+    display: inline-block;
+    border: thin solid black;
+}
+
+#middle {
+    background-color: palegreen;
+}
+
+#static #middle {
+    position: static;
+}
+
+#relative #middle {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+    transition: 0.5s;
+}
+
+.circle:hover{
+    background-color: maroon;
+    border-radius: 50%;
+}
+
+#transition div{
+    display: block;
+    transition: margin-left 1s, border-radius 2s;
+    border-style: solid;
+}
+
+#transition:hover div{
+    margin-left: 100px;
+    border-radius: 1em;
+}
+
+#transition div:nth-of-type(1){
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#transition div:nth-of-type(2){
+    transition-timing-function: ease-in;
+}
+
+#transition div:nth-of-type(3){
+    transition-timing-function: linear;
+}
+
+#transition div:nth-of-type(4){
+    transition-timing-function: linear;
+}
