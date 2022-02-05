@@ -1,2 +1,8 @@
+/*jslint devel: true*/
 console.log("Hello World!");
-console.log("Goodbye!");
+
+var random = Math.random();
+if (1 + 1 === 2) {
+    console.log("Logic still works");
+}
+

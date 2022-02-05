@@ -54,15 +54,18 @@ score /= 2;         // 5
 score++;            // 6
 ```
 
-
-There are 2 other keywords that are used while assigning variables: `const` and `var`.
-
+### `const`
 `const` variables cannot be reassigned, so an error is thrown when some instruction in the code tries to do it.
 ```js
 const luckyNum
 ```
+### `var`
+`var` assignement works very similarly to `let`, however, it has `function` scope, instead of `block` scope. `var` variables can be re-declared (!), so in bigger bigger applications may produce several bugs caused by repeated variable names or by multiple references to variables with the same name.
 
-`var` variables can be reassigned, but nowadays, the keyword is being replaced with `let`, so it is not very common in recent code. It works very similarly to `let`, however, it has global scope, so in bigger bigger applications may produce several bugs caused by repeated variable names.
+Also, `let` is not intended for global scopes, so even if a code may run while havin a `let` assignement in the global scope, many linters will complain about it. 
+
+Better explanation here: https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var
+
 
 ## Booleans
 Booleans are values that can be used to evaluate logic propositions: `true` and `false`.
