@@ -35,7 +35,7 @@ There is a value in JS that represent a numeric value that is not a number. It i
 ```
 Any operation that takes a `NaN` outputs a `NaN`, so no real math can be done with it, however, it helps us handling some results and catch errors.
 
-## Assign variables
+## Declare & Assign variables
 *Variables* are names we use to reference some data we want to use further in our program.
 
 Any variable can be assigned with this simple syntax:
@@ -63,6 +63,8 @@ const luckyNum
 `var` assignement works very similarly to `let`, however, it has `function` scope, instead of `block` scope. `var` variables can be re-declared (!), so in bigger bigger applications may produce several bugs caused by repeated variable names or by multiple references to variables with the same name.
 
 Also, `let` is not intended for global scopes, so even if a code may run while havin a `let` assignement in the global scope, many linters will complain about it. 
+
+Given this restrictions, JS has variable *hoisting* wich enables the use of `var` in 
 
 Better explanation here: https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var
 
