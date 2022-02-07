@@ -100,3 +100,50 @@ form.addEventListener('submit', function (e) {
     /** do something else **/
 });
 ```
+
+## Input and Change events
+
+Changes when we leave the user clicks outside the input element, after editing its value:
+```js
+input.addEventListener('change', function (e) {
+    console.log(input.value);
+})
+```
+
+Changes whenever the value of the input element changes:
+```js
+input.addEventListener('input', function (e) {
+    console.log(input.value);
+})
+```
+
+## Event bubbling
+Some times, the same event can trigger events of an element an one or more of its succesive parents. 
+
+```html
+<div class="container">
+    <button> Click me!</button>
+</div>
+```
+
+```js
+const container = document.querySelector('.container');
+container.addEventListener('onclick', function (e) {
+    /* Do something */
+});
+
+const button = document.querySelector('button');
+button.addEventListener('onclick', function (e) {
+    /* Do other things */
+    e.stopPropagation();
+});
+```
+
+## Event Delegation
+Bind events to the parent of an element that *might* exist in the future, but still be bound to the child when it is created:
+
+```js
+list.addEventListener('click', function (e) {
+    e.target.nodeName === 'LI' && e.target.remove();
+})
+```
