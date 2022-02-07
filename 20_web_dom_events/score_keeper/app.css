@@ -1,0 +1,96 @@
+body {
+    width:40%;
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    
+}
+
+h1, .scores, .goal {
+    padding-left: 10px;
+}
+
+.scores {
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}
+
+section {
+    width: 100%;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+select {
+    border-radius: 1em;
+    width: 3em;
+}
+
+label {
+    font-weight: bold;
+}
+
+.buttons{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.player-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+
+button {
+    display: block;
+    min-width: 100px;
+    height: 4em;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+.btn-player-1 {
+    background-color: rgb(104, 143, 228);
+    margin-right: 3px;
+}
+
+.btn-player-2 {
+    background-color: rgb(231, 99, 99);
+}
+
+
+.btn-reset {
+    background-color: #555;
+}
+
+.button-disabled {
+    background-color: #888;
+}
+
+.winner {
+    color: green;
+}
+
+.loser {
+    color: red;
+}
