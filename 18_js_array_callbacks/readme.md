@@ -65,9 +65,3 @@ numbers.reduce( (accumulator, currentValue) => {
     return accumulator + currentValue;
 });
 ```
-or the average:
-```js
-numbers.reduce( (accumulator, currentValue) => {
-    return accumulator + currentValue / this.length;
-});
-```
