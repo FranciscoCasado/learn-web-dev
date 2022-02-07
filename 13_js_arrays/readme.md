@@ -101,3 +101,13 @@ cats = ["alex", "ditzy"]    // throws an error!
 
 ## Arrays of arrays
 Classics of arrays: arrays can contain arrays.
+
+## Destructuring arrays
+
+```js
+const animals = ['cat', 'dog', 'penguin', 'turtle', 'rat', 'bird'];
+const [cat, dog, ...everyAnimalElse] = animals;
+
+console.log(cat);               // prints 'cat'
+console.log(everyAnimalElse));  // prints ['penguin', 'turtle', 'rat', 'bird']
+```

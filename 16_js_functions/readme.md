@@ -35,10 +35,28 @@ This can happen in JS because even functions are treated as variables and one of
 Arrow functions are a compact way of defining functions, but without naming them. How is it possible? An arrow function only needs a list of arguments and the result it produces, both linked by an arrow `=>`. For example
 
 ```js
-const succesor = (num) => {return num + 1}
+const succesor = (num) => {return num + 1};
 console.log(succesor(4));       // prints 5
 ```
+
+There are some cases when arrow functions can be written in a more compact way:
+- When arrow functions recieve only one argument, the parenthesis can be omitted:
+    ```js
+    const succesor = num => {return num + 1};
+    ````
+- When we want the result inmediately *and* there is only one expression to be evaluated in the function, we can use the *implicit return* notation, where the braces and the `return` keyword are omitted;
+    ```js
+    const succesor = num => num + 1 ;
+    ```
+    If we need to return an object, it must be wrapped in parenthesis:
+    ```js
+    const object = params => ({param: "a"}) ;
+    ```
+    
+**Important note**
 Furthermore, a function can be defined with this syntax and without assigning it to a variable. This kind of functions are called *anonymous functions*, which are very useful when dealing with multiple procedures that share logic, but depend on specific parameter values. More on this topic in the following sections.
+
+
 
 # Higher-order functions
 Every function that recieves one or more function as an argument or returns one or more functions are result is called as a *higher-order* function.
@@ -103,3 +121,32 @@ const myMath = {
     }
 }
 ```
+
+## Accessing arguments of a function
+This applies to every function except arrow ones. Every function comes with an array-like variable that can be accessed through the `arguments` keyword *inside* the function. It is an *array-like* because it behaves as an array in the way it stores the data and how we can access each element, but it has not the buil-in methods that every other iterable has.
+
+In order to deal with this "issue", we can use the *rest params* syntax:
+
+```js
+function sum (start_number, ...rest) {
+   console.log(start_number, rest); 
+}
+```
+This syntax means that all the parameters we enter after the mandatory ones, will be stored in the array `rest` (we can choose any other name; the three dots are the ones that matter).
+
+## Destructuring arguments
+
+```js
+const student = {
+    firstName: 'David',
+    lastName: 'Jones'
+};
+
+function fullName({firstName, lastName}){
+    return `${firstName} ${lastName}`
+}
+
+console.log(fullName(student));     // prints 'David Jones'
+```
+
+This is possible because in the declaration we state that the function expects an object, so using the destructuring feature of the objects we can use the keys that we know and use them directly in the function body.

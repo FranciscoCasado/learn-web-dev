@@ -81,3 +81,17 @@ const student = {
     }
 };
 ```
+
+## Destructuring arrays
+
+```js
+const student = {
+    firstName: 'David',
+    lastName: 'Jones'
+};
+
+const {firstName, lastName} = user;
+
+console.log(firstName);     // 'David'
+console.log(lastName);      // 'Jones'
+```
