@@ -13,3 +13,12 @@ body {
     width: 100px;
     text-align: center;
 }
+
+.pokemon img{
+    transition: ease-in-out 100ms;
+}
+
+.pokemon img:hover {
+    transform: scale(1.4);
+    filter: drop-shadow(1px 1px 5px #ccc)
+}
