@@ -1,6 +1,6 @@
 axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
-.then(res => console.log(res.data.name))
-.catch(err => console.log("Something went wrong :c", e))
+    .then(res => console.log(res.data.name))
+    .catch(err => console.log("Something went wrong :c", err))
 
 const fetchPokemon = async (pokemon_name) => {
     try {
@@ -16,7 +16,7 @@ const jokeDisplay = document.querySelector('.joke-display');
 
 const getDadJoke = async () => {
     try {
-        const headers = {headers: {Accept: 'application/json'}}
+        const headers = { headers: { Accept: 'application/json' } }
         const res = await axios.get('https://icanhazdadjoke.com/', headers)
         return res.data.joke;
     } catch (e) {
@@ -24,7 +24,7 @@ const getDadJoke = async () => {
     }
 }
 
-const updateJoke = async () =>{
+const updateJoke = async () => {
     const joke = await getDadJoke();
     jokeDisplay.innerText = joke;
 }
