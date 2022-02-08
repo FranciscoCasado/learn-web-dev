@@ -14,27 +14,23 @@
     <div class="container">
         <section class="heading">
             <img src="img/pingpong.jpeg" alt="">
-            <h1>Ping Pong Score Keeper</h1>
+            <h1>Ping Pong Score Board</h1>
         </section>
-        <section class="score-table">
-            <div class="scores">
-                <span id="score-player-1">-</span>
+        <section>
+            <div class="score-board js-score-board">
+                <span class="p1-display js-p1-display">-</span>
                 <span> to </span>
-                <span id="score-player-2">-</span>
+                <span class="p2-display js-p2-display">-</span>
             </div>
             <label for="goal" class="goal">Playing to </label>
-            <select name="goal" id="goal">
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="11">11</option>
-                <option value="21">21</option>
+            <select name="goal" class="js-goal">
             </select>
             <div class="buttons">
                 <span class="player-buttons">
-                    <button class="btn-player-1">Player One<br>+1</button>
-                    <button class="btn-player-2">Player Two<br>+1</button>
+                    <button class="p1-button js-p1-button">Player One<br>+1</button>
+                    <button class="p2-button js-p2-button">Player Two<br>+1</button>
                 </span>
-                <button class="btn-reset">Reset</button>
+                <button class="reset-button js-reset-button">Reset</button>
             </div>
         </section>
     </div>

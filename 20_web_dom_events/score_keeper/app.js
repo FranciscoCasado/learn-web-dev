@@ -1,76 +1,82 @@
-var gameScores = {
-    playerOne: 0,
-    playerTwo: 0,
+const p1 = {
+    score: 0,
+    button: document.querySelector('.js-p1-button'),
+    display: document.querySelector('.js-p1-display')
 };
 
-const select = document.querySelector('select');
-select.addEventListener('change', () => gameGoal = select.value)
+const p2 = {
+    score: 0,
+    button: document.querySelector('.js-p2-button'),
+    display: document.querySelector('.js-p2-display')
+};
 
-let gameGoal = select.value;
+const gameGoals = [5, 7, 11, 15, 21, 25];
+const selectGameGoal = document.querySelector('select');
+selectGameGoal.addEventListener('change', () => gameData.goal = selectGameGoal.value)
+
+for (let goal of gameGoals){
+    const option = document.createElement('option');
+    option.text = `${goal}`;
+    option.value = goal;
+    selectGameGoal.add(option);
+}
+selectGameGoal.selectedOptions
 
 
-const playerOneSpan = document.querySelector('#score-player-1')
-const playerTwoSpan = document.querySelector('#score-player-2')
+var gameData = {
+    goal: selectGameGoal.value,
+    players: [p1, p2]
+};
 
-function updateScoreBoard () {
-    playerOneSpan.innerText = gameScores.playerOne;
-    playerTwoSpan.innerText = gameScores.playerTwo;
+function updateScoreBoard() {
+    for (let player of gameData.players) {
+        player.display.innerText = player.score;
+    }
 }
 
-function checkWinner() {
-    if (gameScores.playerOne == gameGoal){
-        playerOneSpan.classList.add('winner');
-        playerTwoSpan.classList.add('loser');
-        disablePlayerButtons()
-    }
-    
-    if (gameScores.playerTwo == gameGoal){
-        playerOneSpan.classList.add('loser');
-        playerTwoSpan.classList.add('winner');
-        disablePlayerButtons()
-    }
+function isWinner(player) {
+    return (player.score == gameData.goal)
 }
 
+function endGame(winner) {
+    winner.display.classList.add('winner');
+    for (let player of gameData.players) {
+        player != winner && player.display.classList.add('loser');
+    }
+    disablePlayerButtons()
+}
 
-const btnPlayerOne = document.querySelector('.btn-player-1');
-const btnPlayerTwo = document.querySelector('.btn-player-2');
+function incrementPlayerScore(player) {
+    player.score += 1;
+    updateScoreBoard();
+    isWinner(player) && endGame(player);
+}
 
-btnPlayerOne.addEventListener('click', function () {
-   gameScores.playerOne +=1;
-   updateScoreBoard(); 
-   checkWinner();
+p1.button.addEventListener('click', () => {incrementPlayerScore(p1)});
+p2.button.addEventListener('click', () => {incrementPlayerScore(p2)});
+
+
+const resetButton = document.querySelector('.reset-button');
+resetButton.addEventListener('click', function () {
+    for (let player of gameData.players) {
+        player.score = 0;
+        player.display.classList.remove('winner', 'loser');
+    }
+    updateScoreBoard();
+    enablePlayerButtons();
 });
 
 
-btnPlayerTwo.addEventListener('click', function () {
-    gameScores.playerTwo +=1;
-    updateScoreBoard(); 
-    checkWinner();
- });
-
-const btnReset = document.querySelector('.btn-reset');
-btnReset.addEventListener('click', function () {
-   gameScores.playerOne = 0;
-   gameScores.playerTwo = 0; 
-   updateScoreBoard();
-   playerOneSpan.classList.remove('loser');
-   playerOneSpan.classList.remove('winner');
-   playerTwoSpan.classList.remove('loser');
-   playerTwoSpan.classList.remove('winner');
-   enablePlayerButtons();
-});
-
-
-function disablePlayerButtons () {
-    btnPlayerOne.disabled = true;
-    btnPlayerTwo.disabled = true;
-    btnPlayerOne.classList.add('button-disabled')
-    btnPlayerTwo.classList.add('button-disabled')
+function disablePlayerButtons() {
+    for (let player of gameData.players) {
+        player.button.disabled = true;
+        player.button.classList.add('button--disabled');
+    }
 }
 
-function enablePlayerButtons () {
-    btnPlayerOne.disabled = false;
-    btnPlayerTwo.disabled = false;
-    btnPlayerOne.classList.remove('button-disabled')
-    btnPlayerTwo.classList.remove('button-disabled')
+function enablePlayerButtons() {
+    for (let player of gameData.players) {
+        player.button.disabled = false;
+        player.button.classList.remove('button--disabled');
+    }
 }
