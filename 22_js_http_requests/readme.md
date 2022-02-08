@@ -23,16 +23,46 @@ Common JSON methods used in applications:
 - `JSON.stringify`
 
 ## The Fetch API
-
+It's useful and far more easy to use than *XML HTTP Requests* (XHR). But it does not provide the data straight away. We have to do at least two steps: fetch and wait for the data.
 ```js
 fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
-    .then( response => {
-        return response.json();
-    })
-    .then( data => {
-        console.log(data)
-    })
-    .catch( error => {
-       console.error('Request Failed') 
-    });
+    .then(response => response.json())
+    .then(data => console.log(data.name))
+    .catch(error => console.error('Request Failed'));
+
 ```
+
+To overcome this *issue*, we can wrap the fetch in another async function:
+```js
+const fetchPokemon = async (pokemon_name) => {
+    try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon_name}`);
+        const data = await res.json();
+        console.log(data.name)
+    } catch (e) {
+        console.error('Something went wrong', e)
+    }
+};
+```
+It's not the best, but it is ok :)
+
+## Axios
+Axios is an open sourced JS library that allows to do the fetching far easier. The request has only one step:
+```js
+axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
+    .then(res => console.log(res.data.name))
+    .catch(err => console.log("Something went wrong :c", err))
+```
+
+And it can be wrapped not because of the step, but for error handling:
+```js
+const fetchPokemon = async (pokemon_name) => {
+    try {
+        const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon_name}`)
+        console.log(res.data.name);
+    } catch (e) {
+        console.log('Somthing went wrong :c', e);
+    }
+};
+```
+
