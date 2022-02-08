@@ -63,13 +63,13 @@ fakeRequestPromise('favkitten.com/page1')
         console.log(data);
         return fakeRequestPromise('favkitten.com/page6')
     })
-    .catch((err) =>{
-       console.error(err) 
+    .catch((err) => {
+        console.error(err)
     });
-    
+
 const delayedColorChange = (color, delay) => {
-    return new Promise( (resolve, rejecct) => {
-        setTimeout( () =>{
+    return new Promise((resolve, rejecct) => {
+        setTimeout(() => {
             document.body.style.backgroundColor = color;
             resolve()
         }, delay)
@@ -77,9 +77,9 @@ const delayedColorChange = (color, delay) => {
 }
 
 delayedColorChange('red', 500)
-    .then( () => delayedColorChange('orange', 500))
-    .then( () => delayedColorChange('yellow', 500))
-    .then( () => delayedColorChange('green', 500))
-    .then( () => delayedColorChange('lightblue', 500))
-    .then( () => delayedColorChange('blue', 500))
-    .then( () => delayedColorChange('indigo', 500))
+    .then(() => delayedColorChange('orange', 500))
+    .then(() => delayedColorChange('yellow', 500))
+    .then(() => delayedColorChange('green', 500))
+    .then(() => delayedColorChange('lightblue', 500))
+    .then(() => delayedColorChange('blue', 500))
+    .then(() => delayedColorChange('indigo', 500))
