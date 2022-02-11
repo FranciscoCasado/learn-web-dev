@@ -1,4 +1,4 @@
-# Hacker's true love: The Terminal
+# The *Beloved* Terminal
 
 The goal of this chapter is to know and to understand the *power* of terminal tools.
 
@@ -12,9 +12,13 @@ A terminal is a text-based interface to your computer. Within the terminal one c
 
 Some systems may have their own propietary shell
 
-## First commands: navigate through your files and folders
+## Navigate through your files and directories
 
-Most operating systems have *file systems*, which means, all the data and we have stored and applications we have installed, *are* in some *place* in the file system. The file system uses mainly two types of *entries*: files and directories. The files are the *information* or *applications* and the directories are the *places*.
+Most operating systems have *file systems*, which means, all the data and we have stored and applications we have installed, *are* in some *place* in the file system. The file system uses mainly two types of *entries*:
+1. Files: the blocks of *information* or *applications* 
+2. Directories: also called *folders*, are the *locations* where entries can be *placed* in the file system.
+
+File systems are usually *trees*, from a data structure perspective, where directories represent *nodes* and files are *leaves* of the tree.
 
 Whenever you open a terminal, it starts in a location by default: the *home* directory. On a Mac, terminals would show some information about the current user (technically is the *host*) and, next to it,the directory where the terminal is placed. Most machines use the `~` symbol as abreviation for the home directory, but to know the *full path*, we can use the `pwd` command, with stands for *print current directory*. Open a terminal and use the `pwd` command (hit <kbd>Enter</kbd> to execute the command).
 
