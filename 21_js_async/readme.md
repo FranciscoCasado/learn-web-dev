@@ -1,4 +1,4 @@
-# JS `async`
+# 21. JS `async`
 
 ## The call stack
 JS, as many other languages, has a call stack that stores all the functions that have been called and yet to be resolved. Its data structure is a stack, so last in first out.
@@ -120,7 +120,7 @@ fakeRequestPromise('favkitten.com/page1')
     });
 ```
 
-## Promises
+## `Promise`
 
 ```js
     

@@ -1,14 +1,17 @@
-# Section 2 and 3 - HTML Basics
+# 1. HTML Basics
 Lest's start with **HTML**
 HTML is a *markup language* used to describe and annotate text format, styles and annotations. The goal of HTML is to take plain text and give it visual structure and appearances.
 
-### HTML Elements
+HTML5 is an *evolution* of the HTML Living Standard: There is no *official* version of HTML. There only a "how HTML must work": every company build their own HTML into their applications. These instructions are [here](https://html.spec.whatwg.org/). One can always use older HTML's, but it's very uncommon.
+
+
+## HTML Elements
 ```html
 <i> italics </i>
 <b> italics </b>
 ```
 
-### HTML Boiler Plate
+## HTML Boiler Plate
 This is the *Skeleton* for every webpage:
 
 Every page must have ONE `<head>` and ONE `<body>`. The head contains the metadata and the body is the information that will be displayed in the page.
@@ -30,7 +33,7 @@ Also, we need some tags to define this document as an HTML one by using:
 ```
 In VS Code you can use the *Format this document* to re-arrange the file content. The shortcut for this es `Option+Shift+F`
 
-### Lists: ordered and unordered
+## Lists: ordered and unordered
 
 
 ```html
@@ -44,6 +47,6 @@ In VS Code you can use the *Format this document* to re-arrange the file content
 ```
 Only `<li>` can be used inside a list. But one can nest lists inside an `<li>` tag :)
 
-### Anchor tags: provide links
+## Anchor tags: provide links
 anchor tags are *in-line* elements, which means the do not take their own new line. They can be accomodated inside a paragraph or any other text
 

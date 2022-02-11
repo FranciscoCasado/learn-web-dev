@@ -1,4 +1,4 @@
-# The wonderful world of JavaScript
+# 10. The wonderful world of JavaScript
 JS can be run headless in a server or control the logic of html pages in many modern browsers. From interactive menus and galleries, to chatboxes inside a shop web page, JS can manage whatever happens inside a page and we can define the logic of how it happens :)
 
 ## How to execute JS code

@@ -1,5 +1,5 @@
 
-# Section 7 - CSS Selectors
+# 4. CSS Selectors
 
 CSS has a strutured way of computing which selector must go in every element, so having that in mind will help to organize our code better.
 

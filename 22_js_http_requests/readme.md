@@ -1,4 +1,4 @@
-# HTTP Requests with JS
+# 22. HTTP Requests with JS
 
 ## The Request-Response data cycle
 

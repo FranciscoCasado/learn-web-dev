@@ -1,4 +1,4 @@
-# Prototypes, Classes and Object Oriented Programming
+# 23. Prototypes, Classes and Object Oriented Programming
 In this chapter we cover the JS flavour of Object Oriented Programming (*OOP*). Most important
 
 ## Object Prototypes

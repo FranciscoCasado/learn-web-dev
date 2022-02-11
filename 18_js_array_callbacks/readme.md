@@ -1,4 +1,4 @@
-# Array Callbacks
+# 18. JS Array methods
 
 Arrays have powerfull functions that iterate throw the array and recieve another function as an argument, called *callback*. The callback will be executed with every element of the array as an argument.
 

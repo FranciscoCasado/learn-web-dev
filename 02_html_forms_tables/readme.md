@@ -1,18 +1,12 @@
-# Section 4 - HTML next steps
+# 2. HTML Tables & Forms
 - Undestanding what HTML5 actually is
 - Block vs Inline Elements
 - `span`and `div`elements
 - NTH: `sub` `hr` `br`and `sup`elements   
 
-## HTML5 is not a *version*
-HTML5 is an *evolution* of the HTML Living Standard: There is no *official* version of HTML. There only a "how HTML must work": every company build their own HTML into their applications. These instructions are [here](https://html.spec.whatwg.org/). One can always use older HTML's, but it's very uncommon.
-
-
-
-## Section 5 - HTML Tables & Forms
-
 What we will learn: HTML tables and HTML forms (how to input data), although these days is not a good practice.
-### Tables Basics:
+
+## Tables Basics:
 Tables were used to *layout* content inside a webpage. We can create tables usign upto 15 elemets, but we don't actually need all of them :)
 
 - `<table>`: declare a table block
@@ -26,6 +20,7 @@ These are just for proper handling of the table
 - `<tfoot>`: obvious?
 
 Always follow this structure:
+
 ```html
 <table>
     <thead>
@@ -58,13 +53,14 @@ Always follow this structure:
 
 How about multiple table headers?
 
-### Forms
+## Forms
 A form represents a section of the document containing interactive controls for submitting informatio
 
 - The *action* attribute specifies WHERE the data should be sent. e.g.: `/search/`, `/tacos`
 - The *method* attribute specifies which HTTP method should be used
 
 What con go inside a form: almost any type of input and text. This is the basic structure:
+
 ```html
 <form action="/tacos">
     <p>
@@ -74,6 +70,7 @@ What con go inside a form: almost any type of input and text. This is the basic 
     <button>Submit</button>
 </form>
 ```
+
 The abtributes do the following:
 - Inside `label`, `for=""` specifies the identifier for the label across the form (or document *citation needed )
 - The label identifier then is passed to the `input` in the `id` attribute
@@ -95,6 +92,7 @@ Radio Buttons
 Note that radio buttons and checkboxes always send `on` when submitted, unless the `value` attribute is specified.
 
 The following won't work when submit button is clicked
+
 ```html
 <form action="">
     <label for="xs">XS:</label>
@@ -105,14 +103,16 @@ The following won't work when submit button is clicked
     <input type="radio" name="size" id="m">
     <button>Submit</button>
 </form>
-``
-This will send
 ```
+This will send
+
+```html
 ?size=on
 ```
 
 The following, however, will send the data we want to send:
-```
+
+```html
 <form action="">
     <label for="xs">XS:</label>
     <input type="radio" name="size" id="xs" value="xs">
@@ -125,7 +125,7 @@ The following, however, will send the data we want to send:
 </form>
 ```
 
-### Dropdown lists: Select and Option
+## Dropdown lists: `select`
 
 ```html
 <form>

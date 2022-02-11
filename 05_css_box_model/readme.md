@@ -1,4 +1,4 @@
-# Section 8 - CSS Box Model
+# 5. CSS Box Model
 
 ## Width and Heigth
 The always state the **content** dimensions
@@ -18,7 +18,7 @@ border:
 
 Additionally, we can set `border-sizing`to specify if the dimensions consider what is inside the border or if it es included in the overall dimensions.
 
-## Padding and Margin
+## `padding` and `margin`
 The thing you put inside a box carrying fragile stuff to prevent damages. The padding goes between the content and the border. It is colored in green in the code inspector tools
 
 The padding shorthand is just `padding` and it can be written as 
@@ -30,11 +30,11 @@ padding:
 The margin works as padding, but outside the box border.
 By default, the `body` has a fixed margin value, so it is common to override it to cero at the very start of a new project.
 
-## Display
+## `display`
 The `display`property handles how elements use the space, in relation to other elements
 
 
-## EMs & REMs
+## `em`s & `rem`s
 
 *EM* is a unit in the typography field that is equil to the currently specified point size.
 

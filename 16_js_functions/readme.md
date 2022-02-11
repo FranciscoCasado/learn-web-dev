@@ -1,4 +1,4 @@
-# Functions
+# 16. JS Functions
 
 Functions are *reusable procedures*, useful for making the code easier tounderstand.
 
@@ -9,7 +9,7 @@ let die2 = Math.floor(Math.random() * 12);
 let die3 = Math.floor(Math.random() * 6);
 ```
 
-## Function declaration
+## Function declaration syntax
 With functions we can write the following `rollDice()` function which can also have an argument were we pass the number of sides of a dice:
 ```js
 function rollDice(sides) {
@@ -40,15 +40,20 @@ console.log(succesor(4));       // prints 5
 ```
 
 There are some cases when arrow functions can be written in a more compact way:
+
 - When arrow functions recieve only one argument, the parenthesis can be omitted:
+    
     ```js
     const succesor = num => {return num + 1};
-    ````
+    ```
+
 - When we want the result inmediately *and* there is only one expression to be evaluated in the function, we can use the *implicit return* notation, where the braces and the `return` keyword are omitted;
+    
     ```js
     const succesor = num => num + 1 ;
     ```
     If we need to return an object, it must be wrapped in parenthesis:
+    
     ```js
     const object = params => ({param: "a"}) ;
     ```
@@ -58,25 +63,26 @@ Furthermore, a function can be defined with this syntax and without assigning it
 
 
 
-# Higher-order functions
+## Higher-order functions
 Every function that recieves one or more function as an argument or returns one or more functions are result is called as a *higher-order* function.
 
-## Function as argument
+### Function as argument
 ```js
 function callTwice (func) {
     func();
     func();
 }
-
 function rollDice () {
     const roll = Math.floor(Math.random() * 6) + 1;
     console.log(roll);
 }
-
 callTwice(rollDice);    // prints two times
 ```
-## Return a function
+
+### Return a function
+
 There are several applications where we may want to return functions depending on parameters. The following code example is based on a code pattern called *factory* and is widely for several purposes:
+
 ```js
 function makeBetweenFunc (min, max) {
     return function (num) {
@@ -93,8 +99,9 @@ console.log(isAdult(17));   // false
 console.log(isSenior(95));  // true
 ```
 
-## Add methods to objects
+### Add methods to objects
 Combining the information above, we can see that object literals can have functions as property values, which then behave as methods:
+
 ```js
 const myMath = {
     PI: 3.1415,
@@ -111,6 +118,7 @@ console.log(myMath.cube(4))     // prints 64
 ```
 
 Recently, there is a shorthand for omitting the `function` keyword:
+
 ```js
 const myMath = {
     add (x, y) {
@@ -122,7 +130,7 @@ const myMath = {
 }
 ```
 
-## Accessing arguments of a function
+### Accessing arguments of a function
 This applies to every function except arrow ones. Every function comes with an array-like variable that can be accessed through the `arguments` keyword *inside* the function. It is an *array-like* because it behaves as an array in the way it stores the data and how we can access each element, but it has not the buil-in methods that every other iterable has.
 
 In order to deal with this "issue", we can use the *rest params* syntax:
@@ -134,7 +142,7 @@ function sum (start_number, ...rest) {
 ```
 This syntax means that all the parameters we enter after the mandatory ones, will be stored in the array `rest` (we can choose any other name; the three dots are the ones that matter).
 
-## Destructuring arguments
+### Destructuring arguments
 
 ```js
 const student = {

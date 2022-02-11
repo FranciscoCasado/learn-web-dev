@@ -1,4 +1,4 @@
-# JS object literals
+# 14. JS object literals
 
 In JS is very common to store information by using *object literals*, which are collection of data, like arrays, but instead of having slots and indices, we have *properties*, which are *key-value* pairs.
 

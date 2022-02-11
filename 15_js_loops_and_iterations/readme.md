@@ -1,4 +1,4 @@
-# Loops and Iterations
+# 15. JS Loops and Iterations
 
 Whenever a process must be repeated several times is always better to use *lopps*. JS has many ways of looping, but the most common are:
 - `for`

@@ -1,4 +1,4 @@
-# JS Arrays
+# 13. JS Arrays
 Arrays allow us to *group* data together in a ordered manner. In other words, they are an ordered collection of information.
 
 Array syntax in JS is the following:

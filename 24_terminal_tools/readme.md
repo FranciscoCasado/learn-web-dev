@@ -1,4 +1,4 @@
-# The *Beloved* Terminal
+# 24. The *Beloved* Terminal
 
 The goal of this chapter is to know and to understand the *power* of terminal tools.
 

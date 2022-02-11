@@ -1,4 +1,4 @@
-# Scopes
+# 17. JS Scopes
 
 The *scope* of a variable refers to its *visibility* or *where in the code* can the variable be used. JS has three scopes: function, block and lexical.
 
@@ -62,7 +62,7 @@ function bankRobery(){
 
 
 
-# `this`
+## The `this` keyword
 The keyword `this` refers to the object itself. When called inside an object, the keyword will hold every variable and method that it has been bound to (via property-value assignements).
 
 However, `this` value depends on the context where it is run. Lets see the following example when run in the terminal with node:

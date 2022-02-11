@@ -13,9 +13,7 @@ Some useful resources:
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
 - Chome Inspector
 
-
-## Lesson 1: Basic Concepts
-### The Internet and the Web
+## The Internet and the Web
 The internet is a **global** network of networks. It is the infrastructure that allows services such as e-mails
 The World Wide eb is the system that allows sharing information over the internet. The current protocol for sharing is *Hyper Text Transfer Protocol* (HTTP) and it works with *Requests* and *Responses*. In every information exchange, we have two agents:
 1. The servers are machines (computers) and also softwares that can satisfy requests on the web.
@@ -25,7 +23,7 @@ At a human level, a web browser is necessary to process the information that ser
 
 Nowadays, the servers mostly respond with instructions that use three main technologies: HTML, JavaScript and CSS.
 
-### Front-end and Back-eand
+## Front-end and Back-eand
 One suitable analogy to understand the relationshio between the front and the back ends is the kitchen and the tables in a restaurant:
 1. At the table, the front-end, the waiters take your order (request)
 2. Then, the kitchen, the back-end, prepares your meals (processes your request) and then delivers them with the waiters (response)
@@ -34,9 +32,11 @@ In the web development, one can separate this two ends in terms of what technolo
 
 In this course we start by understanding the front-end and then we move into the server-side :)
 
-### Front-end: The Purple Dino Danced
 The front-end technologies have unique roles as follows:
 
 - HTML: *What*, the contents of the page (the structure)
 - CSS: *How it should look*, the content display style
 - JS: *Actions*, how do the page behaves and interacts
+
+Later, starting in section [25], the focus will be on the back-end. There is no just *one devinitive* set of technologies, but a collection of them that can be used to implement *servers*. In this course we cover *Node JS* as the main back-end framework, along with some packages and other tools, like *Express* and *MongoDB*.
+

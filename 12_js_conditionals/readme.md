@@ -1,4 +1,4 @@
-# Comparisons
+# 12. JS Comparisons
 
 As in many languages, JS has comparisons between numbers and other types. The most basic is comparing numbers, which always return a `boolean`, but characters can also be compared using the unicode mapping:
 ```js

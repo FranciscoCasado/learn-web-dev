@@ -1,5 +1,4 @@
-
-# JS Primitive types
+# 11. JS Primitive data types
 The most primitive types in JS are:
 - Numbers: represent every type of number (except complex)
 - Strings represent *arrays* of characters and letters

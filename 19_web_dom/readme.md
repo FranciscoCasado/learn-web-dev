@@ -1,4 +1,4 @@
-# The Document Object Model
+# 19. The Document Object Model
 
 The DOM is a JavaScript representation of the elements that are contained in a page. It is a tree where the nodes are the html elements.
 
@@ -46,7 +46,7 @@ for (let e of allImages) {
 - `document.getElementsByClassName(class)`: fetch *all* the elements of the document that match the specified class (as a string). Returns an *html collection* which is an array-like of objects that represent all the matching html elements.
 
 
-## Query Selector
+### Query Selector
 
 A modern way of fetching the elements of a document in a more concise way. It returns the first element in the DOM tree that matches the specified one of the identifiers:
 
@@ -56,7 +56,7 @@ document.querySelector('p a');
 The `querySelectorAll()` variant returns all the elements that match the specified identifiers.
 
 
-# Manipulating
+## Manipulating Elements
 
 Once we have fetched an element, then we can alter its properties by simply setting them:
 ```js
@@ -76,11 +76,11 @@ It is important to know common attributes that can be edited:
 - `textContent`
 
 
-## `getAttribute` and `setAttribute`
+### `getAttribute` and `setAttribute`
 
-# Change Styles
+## Change Styles
 
-## Inline styles
+### Inline styles
 ```js
 const h1 = document.querySelector('h1');
 h1.style.color = 'green';
@@ -92,7 +92,7 @@ for (let link of allLinks){
     link.style.fontFamily = 'sans-serif';
 }
 ```
-## Manipulate classes
+### Manipulate classes
 We can do this:
 ```js
 const h1 = document.querySelector('h1');
@@ -107,7 +107,7 @@ h1.classList.remove('purple')
 h1.classList.toggle('purple')   // adds or removes 
 ```
 
-# Traverse through elements
+## Traverse through elements
 
 ```js
 const firstBold = document.querySelector('b');
@@ -121,15 +121,15 @@ squareImg.previousElementSibling;
 squareImg.nextElementSibling;
 ```
 
-# Create and remove elements
+## Create and remove elements
 
-## Append child
+### Append child
 ```js
 const newImg = document.createElement('img');  // creates an *empty* image
 newImg.src = 'hhttps://upload.wikimedia.org/wikipedia/commons/7/75/Cute_grey_kitten.jpg';
 document.body.appendChild(newImg)
 ```
-## Insert as sibling
+### Insert as sibling
 ```js
 const h2 = document.createElement('h2');
 h2.append("This is an h2");
@@ -142,7 +142,8 @@ There are for `position` values that can be used:
 - `beforeend`: insert inside target element as last child
 - `afterend`: just after the target element
 
-## remove and removeChild
+### Remove elements
+`remove` and `removeChild`
 ```js
 const b = document.querySelector('b')
 b.parentElement.removeChild(b);

@@ -1,4 +1,4 @@
-# DOM Events
+# 20. Document Object Model Events
 
 This section covers how to respond to user inputs and actions: the most powerful features of the web!
 

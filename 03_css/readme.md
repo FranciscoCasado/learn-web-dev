@@ -1,4 +1,4 @@
-# Section 6 - CSS
+# 3. CSS: Cascading Style Sheets
 
 What it is: Cascading Style Sheets. Decribing *how* documents are presented visually, a.k.a. *the looks*
 
@@ -55,6 +55,7 @@ In CSS we have *named* colors, but we can also use *coded* colors
 - Realvite Units: `em`, `rem`, `vh`, `vw`, `%`
 - Absolute units: `pt`, `cm`, `mm`
     - `px` not necessarily equal the width of 1 pixel in your machine. Not recommended for responsive websites  
+
 ### Fonts
 `font-family` is the property that specifies the font of the page, but changing it may not be as easy as it seem. Some fonts may not be supported in a users browser
 
