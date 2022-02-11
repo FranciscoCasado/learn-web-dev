@@ -8,7 +8,7 @@ Folders  of this repository represents a section of the course and every folder 
 Apart from the `readme.md` files, some folderd contains the resultant code of the section, all coded along the lectures. They run, but may not free of bugs :bug:.
 
 ## Compiled notes
-If, for some weird reason, you want to read all the notes together, I regularly compile then into the `compiled_notes.pdf` file using [Pandoc](https://pandoc.org/), a universal document converter, with the following command:
+If, for some weird reason, you want to read all the notes together, I regularly compile then into the `compiled_notes.pdf` file using [Pandoc](https://pandoc.org/), a universal document converter, with the following commands:
 
 ```sh
 pandoc */*.md --toc -o compiled_notes.pdf
