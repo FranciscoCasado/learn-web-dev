@@ -52,8 +52,9 @@ file3.txt
 ```
 To go back to the home, we can execute `cd` without arguments. It returns to the home by default :)
 
-**Important Note** 
->For now on, all code snippets will not include the directory or the `$` symbol. They will be just the commands, with the outputs in separate snippets if necessary
+**Important Note**
+
+> For now on, all code snippets will not include the directory or the `$` symbol. They will be just the commands, with the outputs in separate snippets if necessary
 
 
 ## Adding entries
