@@ -1,5 +1,4 @@
 # The Web Developer Bootcamp 2021
-*by Colt Steele*
 
 This course has a [changelog](https://www.notion.so/Web-Developer-Bootcamp-ChangeLog-45e3eab6be724c5f9a4b83c01044e126])
 

@@ -16,6 +16,7 @@ console.log(bird)   // prints undefined
 Variables defined out of the function can be used inside a function, but also, a new variable that uses the same namespace as an outer variable can be declared inside a function:
 
 1. Variable declared out of the function and used in the function
+
     ```js
     let bird = "Nighingale";
     function birdWatch() {
@@ -28,6 +29,7 @@ Variables defined out of the function can be used inside a function, but also, a
     console.log(bird)   // prints 'Sparrow'
     ```
 2. Variable with same name declared inside the function
+    
     ```js
     let bird = "Nighingale";
     function birdWatch() {

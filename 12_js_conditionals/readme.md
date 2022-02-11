@@ -6,13 +6,13 @@ As in many languages, JS has comparisons between numbers and other types. The mo
 5 < 9;      // true
 'A' < 'a';  // true
 ```
-### Common operators
--
--
--
--
 
-### Equality operators
+## Equality & Inequality operators
+
+- `<`: less than 
+- `<=`: less or equal than
+- `>`: greater than
+- `>=`: greater or equal than
 
 - `==` : equiality that coherces value type, i.e.: convert to the same type and then compare
 - `!=` : negate  equality
