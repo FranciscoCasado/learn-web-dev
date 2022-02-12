@@ -15,5 +15,5 @@ pandoc */*.md --toc -o compiled_notes.pdf
 ```
 
 ## License
-Use whatever you want :)
-This has no license
+
+BSD 3-Clause License: everything allowed while retaining license and copyright notice. [See the license](LICENSE.md)
