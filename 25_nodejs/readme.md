@@ -173,3 +173,44 @@ console.log(cats)
 ```
 
 Notice that the `require` takes the folder name as argument, instead of `shelter/index.js`. This is possible thanks to the node `require` implementation that automatically looks for an `index.js` file when a folder is passed as argument.
+
+### Installing external packages with `npm`
+
+We can install packages globally just using `npm install <package>`, but in most cases we may want to use only packages related to our app. To do that, we must initialize our project as a package: first change directory to the project location, then run:
+
+```sh
+npm init
+```
+
+This will ask us to fill information about the package, such as name, version number, author, etc. When we are done, a file `package.json` will be created with all the information.
+
+After that, whenever we use `npm install`, packages will be copied to a folder inside our project, called `node_modules` and the `package.json` file will be updated with the package information and meta-data. For example
+
+```json
+{
+  "name": "jokester",
+  "version": "1.0.0",
+  "description": "funny jokes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dad-jokes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}
+```
+
+### Version control of our packages and dependencies
+
+**DO NOT INCLUDE `node_modules` folder, NEVER!**
+
+That's what the `package.json` file is for: share what you need to install, not the full installation.
+
+
+
