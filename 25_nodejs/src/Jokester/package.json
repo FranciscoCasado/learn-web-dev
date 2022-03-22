@@ -1,0 +1,17 @@
+{
+  "name": "jokester",
+  "version": "1.0.0",
+  "description": "funny jokes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dad-jokes"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}
