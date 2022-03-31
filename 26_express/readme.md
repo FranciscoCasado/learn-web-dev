@@ -78,3 +78,23 @@ app.get('*', (req, res) => {
     res.send("I don't know that path :c")
 })
 ```
+
+### Routing patterns
+Another way of handling routes is using patterns:
+
+```js
+app.get('/t/:topic', (req, res) => {
+    console.log('topic request!');
+    const { topic } =  req.params;
+    res.send(`Welcome to the mighty <b>${topic}</b> topic!`)
+})
+
+app.get('/t/:topic/:id', (req, res) => {
+    console.log('topic request!');
+    const { topic, id } =  req.params;
+    res.send(`Viewing post <b>${id}</b> of topic ${topic}`)
+})
+```
+
+## Query Strings
+
