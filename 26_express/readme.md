@@ -98,3 +98,28 @@ app.get('/t/:topic/:id', (req, res) => {
 
 ## Query Strings
 
+```js
+app.get('/search', (req, res) => {
+    const { q } = req.query;
+    if (!q) {
+        res.send('~ nothing found if nothing searched ~')
+        return;
+    };
+    res.send(`<h1>Search results for ${q}</h1>`)
+})
+```
+
+### Developing with Nodemon
+
+Install
+
+```sh
+npm i -g nodemon
+```
+
+Run
+```sh
+nodemon src/index.js
+```
+
+works like a charm <3
